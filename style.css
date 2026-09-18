@@ -1,0 +1,336 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--red: #333333;
+	--text: #222222;
+	--gray: #666666;
+	--line: #d9d9d9;
+}
+
+body {
+	margin: 0;
+	background: #ffffff;
+	color: var(--text);
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.page-shell {
+	width: 100%;
+	min-height: 100vh;
+	margin: auto;
+	background: white;
+}
+
+.navbar,
+.footer,
+.brand,
+.nav-links,
+.section-heading,
+.info-row {
+	display: flex;
+	align-items: center;
+}
+
+.navbar,
+.footer {
+	justify-content: space-between;
+	padding: 0 48px;
+}
+
+.navbar {
+	min-height: 64px;
+	border-bottom: 1px solid var(--line);
+}
+
+.brand {
+	gap: 8px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.brand-mark {
+	width: 28px;
+	height: 28px;
+	object-fit: contain;
+}
+
+.nav-links {
+	gap: 24px;
+	color: var(--gray);
+	font-size: 13px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+	color: var(--red);
+}
+
+.content-wrap {
+	width: min(100% - 96px, 1100px);
+	margin: 0 auto;
+	padding: 48px;
+}
+
+.eyebrow,
+.section-kicker,
+.profile-label,
+.info-label,
+.intro-label {
+	margin: 0;
+	color: var(--red);
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1 {
+	margin: 10px 0 4px;
+	font-size: 40px;
+}
+
+.faculty {
+	margin: 0;
+	color: var(--gray);
+}
+
+.lesson-section,
+.profile-section {
+	padding-top: 30px;
+	border-top: 1px solid var(--line);
+}
+
+.profile-section {
+	margin-top: 48px;
+}
+
+.section-heading {
+	justify-content: space-between;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	margin: 4px 0 0;
+	font-size: 23px;
+}
+
+.status-badge,
+.member-count,
+.program-badge {
+	padding: 4px 8px;
+	border-radius: 2px;
+	color: var(--red);
+	font-size: 11px;
+	white-space: nowrap;
+}
+
+.member-count {
+	color: var(--gray);
+}
+
+.program-badge {
+	border: 1px solid var(--line);
+}
+
+.lesson-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.lesson-info,
+.intro-box,
+.profile-card {
+	border: 1px solid var(--line);
+	border-radius: 2px;
+}
+
+.lesson-info,
+.intro-box {
+	padding: 20px;
+}
+
+.info-row {
+	justify-content: space-between;
+	gap: 15px;
+	padding: 11px 0;
+	border-bottom: 1px solid var(--line);
+	font-size: 13px;
+}
+
+.info-row:first-child {
+	padding-top: 0;
+}
+
+.info-row:last-child {
+	border-bottom: 0;
+}
+
+.info-label,
+.profile-label {
+	color: var(--gray);
+	font-size: 10px;
+}
+
+.info-row strong {
+	text-align: right;
+}
+
+.download-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	margin-top: 16px;
+	color: var(--red);
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.download-button svg {
+	width: 15px;
+	height: 15px;
+}
+
+.intro-box {
+	background: #f8f8f8;
+}
+
+.intro-label {
+	margin-bottom: 14px;
+}
+
+.intro-text {
+	margin-bottom: 18px;
+	font-size: 15px;
+}
+
+.intro-signature,
+.student-id {
+	color: var(--gray);
+	font-size: 12px;
+}
+
+.intro-signature {
+	margin: 0;
+}
+
+.profile-card {
+	display: flex;
+	min-height: 160px;
+	overflow: hidden;
+}
+
+.profile-card + .profile-card {
+	margin-top: 16px;
+}
+
+.profile-link {
+	display: flex;
+	width: 100%;
+	color: inherit;
+	text-decoration: none;
+}
+
+.profile-photo {
+	width: 120px;
+	height: 160px;
+	flex: 0 0 120px;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+}
+
+.profile-details {
+	padding: 24px;
+}
+
+.profile-label {
+	margin-bottom: 6px;
+}
+
+h3 {
+	margin-bottom: 4px;
+	font-size: 21px;
+}
+
+.student-id {
+	margin: 0 0 14px;
+}
+
+.footer {
+	min-height: 58px;
+	border-top: 1px solid var(--line);
+	color: var(--gray);
+	font-size: 11px;
+}
+
+@media (max-width: 640px) {
+	.navbar,
+	.footer,
+	.content-wrap {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.content-wrap {
+		width: 100%;
+	}
+
+	.nav-links {
+		gap: 14px;
+		font-size: 11px;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	.lesson-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.section-heading {
+		align-items: flex-start;
+	}
+
+	.profile-photo {
+		width: 100px;
+		height: 133px;
+		flex-basis: 100px;
+	}
+
+	.profile-card {
+		min-height: 133px;
+	}
+
+	.profile-details {
+		padding: 18px 16px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	.footer {
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: center;
+		gap: 4px;
+		padding: 12px 20px;
+	}
+}
