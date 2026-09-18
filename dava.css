@@ -2,116 +2,180 @@
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    min-height: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    color: #222;
-    background: #f5f5f5;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #222;
+    background: #fff;
 }
 
-.navbar {
+.site-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 18px 34px;
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #ebddd9;
-    backdrop-filter: blur(5px);
+    align-items: center;
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+    padding: 16px 36px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #d6d6d6;
 }
 
 .brand {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    color: #111;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
     text-decoration: none;
-    color: #222;
-    font-weight: bold;
-}
-
-.brand-mark {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #b95b55, #d9a7a1);
-    color: #fff;
-    display: grid;
-    place-items: center;
-    font-size: 14px;
 }
 
 .nav-links {
     display: flex;
-    gap: 18px;
+    align-items: center;
+    gap: 24px;
 }
 
-.nav-link {
+.nav-links a {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
     text-decoration: none;
-    color: #555;
-    font-size: 14px;
+    transition: color 180ms ease;
+}
+
+.nav-links a:hover {
+    color: #a07d00;
 }
 
 .profile-card {
-    width: min(92%, 760px);
-    margin: auto;
-    padding: 42px 32px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(234, 210, 205, 0.7);
-    border-radius: 22px;
-    box-shadow: 0 10px 30px rgba(109, 74, 68, 0.08);
+    display: flex;
+    align-items: center;
+    width: min(100%, 680px);
+    gap: 36px;
+    margin: clamp(110px, 18vh, 160px) auto 0;
+    padding: 30px 36px;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.photo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 160px;
+    padding-right: 36px;
+    border-right: 1px solid #ddd;
 }
 
 .photo-box {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 22px;
+    width: 160px;
+    height: 160px;
+    margin: 0;
     display: block;
     object-fit: cover;
-    border-radius: 18px;
-    background: #e9e9e9;
-    border: 1px solid #eaded8;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.greeting {
+    margin: 0 0 8px;
+    color: #555;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-style: italic;
 }
 
 h1 {
-    margin: 0 0 10px;
-    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0 0 12px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
 }
 
-.nim,
-.info {
-    margin: 8px 0;
-    font-size: 15px;
+.profile-card section {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.introduction {
+    max-width: 400px;
+    margin: 0 auto;
     color: #444;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.text {
-    max-width: 560px;
-    margin: 22px auto 0;
-    font-size: 14px;
-    line-height: 1.9;
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.contact-links a {
     color: #555;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: #222;
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-    .navbar {
+    body {
+        padding: 0 16px;
+    }
+
+    .site-header {
+        width: calc(100% + 32px);
+        margin: 0 -16px;
         padding: 14px 18px;
     }
 
+    .nav-links {
+        gap: 14px;
+    }
+
     .profile-card {
-        width: min(92%, 90vw);
-        padding: 28px 18px;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        margin-top: 60px;
+        padding: 30px 18px;
+        text-align: center;
     }
 
     .photo-box {
         width: 150px;
         height: 150px;
+        margin: 0 auto;
+    }
+
+    .photo-area {
+        flex-basis: auto;
+        width: 100%;
+        padding: 0 0 24px;
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .introduction {
+        font-size: 13px;
+    }
+
+    .contact-links {
+        justify-content: center;
     }
 }
+

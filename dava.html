@@ -7,26 +7,32 @@
     <link rel="stylesheet" href="dava.css">
 </head>
 <body>
-    <nav class="navbar">
+    <header class="site-header">
         <a class="brand" href="index.html">
-            <span class="brand-mark">D</span>
-            <span>Blog Pribadi Dava</span>
+            <span>PEMOGRAMAN WEB</span>
         </a>
-        <div class="nav-links">
-            <a class="nav-link" href="index.html">Kembali ke Home</a>
-        </div>
-    </nav>
+        <nav class="nav-links" aria-label="Navigasi utama">
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
 
-    <div class="profile-card" id="profil">
-        <img class="photo-box" src="asset/dava.png" alt="Foto Dava Ramadhan">
-        <h1>Dava Ramadhan</h1>
-        <p class="nim">NIM: 3337250163</p>
-        <p class="info">Universitas Sultan Ageng Tirtayasa</p>
-        <p class="info">Jurusan: informatika</p>
-        <p class="text">
-            Saya adalah mahasiswa yang sedang belajar dan terus berusaha berkembang di bidang teknologi.
-            Target saya ke depan adalah menjadi orang yang lebih siap, lebih berilmu, dan bisa bermanfaat.
-        </p>
-    </div>
+    <main class="profile-card" id="profil">
+        <div class="photo-area">
+            <img class="photo-box" src="asset/dava.png" alt="Foto M.DAVANSA PANDU RAYA">
+        </div>
+        <section aria-label="Informasi profil">
+            <p class="greeting">Halo, saya</p>
+            <h1>M.DAVANSA PANDU RAYA</h1>
+            <p class="introduction">
+                Saya adalah M. Davansa Pandu Raya dengan NIM 3337250163.
+                Saat ini saya sedang menempuh pendidikan di Universitas Sultan Ageng Tirtayasa,
+                Fakultas Teknik, program studi S1 Informatika.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:dava@example.com">✉ Email</a>
+                <a href="https://github.com/" target="_blank" rel="noreferrer">◉ GitHub</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
