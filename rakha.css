@@ -1,0 +1,93 @@
+body {
+    font-family: "Segoe UI", serif;
+    text-align: center;
+    margin: 0;
+
+    background: linear-gradient(
+        270deg,
+        #222222,
+        #666666,
+        #999999,
+        #666666,
+        #222222
+    );
+
+    background-size: 800% 800%;
+    animation: warnaGerak 10s ease infinite;
+}
+
+@keyframes warnaGerak {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background-color: white;
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Foto profil */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Judul */
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #444;
+}
+
+/* Tabel biodata */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    padding: 8px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hobi */
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+/* Tombol */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+}
