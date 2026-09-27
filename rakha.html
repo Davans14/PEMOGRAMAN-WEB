@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Biodata Rakha</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="rakha.css">
 </head>
 
 <body>
 
-    <header class="bg-dark">
-        <nav class="navbar navbar-expand-md navbar-dark flex-wrap justify-content-between gap-3 px-3 px-sm-4 py-3" aria-label="Navigasi utama">
-            <a class="navbar-brand fw-bold small" href="index.html">
-                <span>PEMROGRAMAN WEB</span>
-            </a>
-            <div class="navbar-nav flex-row flex-wrap align-items-center column-gap-2 column-gap-sm-3 small">
-                <a class="nav-link px-2" href="index.html#beranda">Home</a>
-                <a class="nav-link px-2" href="index.html#anggota">Profil Anggota</a>
-                <a class="nav-link px-2" href="dava.html">Profil Dava</a>
-                <a class="nav-link px-2" href="rakha.html">Profil Rakha</a>
+    <!-- Navbar Penghubung 3 Halaman sesuai Tugas -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-6" href="index.html">PEMROGRAMAN WEB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <div class="profile-container">
+    <div class="bio-box">
 
         <h1>Biodata Saya</h1>
 
@@ -39,12 +41,10 @@
                 <td><b>Nama</b></td>
                 <td>Firdaus Rakha Ramadhan</td>
             </tr>
-
             <tr>
                 <td><b>NIM</b></td>
                 <td>3337250076</td>
             </tr>
-
             <tr>
                 <td><b>Kelas</b></td>
                 <td>B</td>
@@ -52,24 +52,13 @@
         </table>
 
         <h2>Hobi Saya</h2>
-
-        <p>
-            Fragrance | Game | Music
-        </p>
+        <p>Fragrance | Game | Music</p>
 
         <h2>Media Sosial</h2>
-
-        <p>
-            email : firdausrakharmadhan@gmail.com
-        </p>
-
-        <br>
-
-        <a href="index.html"
-        ><button>Home</button>
-    </a>
+        <p>email : firdausrakharamadhan@gmail.com</p>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

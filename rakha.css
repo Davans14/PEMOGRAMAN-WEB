@@ -1,8 +1,7 @@
 body {
-    font-family: "Segoe UI", serif;
+    font-family: "Segoe UI", sans-serif;
     text-align: center;
     margin: 0;
-    min-height: 100vh;
 
     background: linear-gradient(
         270deg,
@@ -21,64 +20,56 @@ body {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
 }
 
-.profile-container {
-    box-sizing: border-box;
+.bio-box {
     background-color: white;
-    width: min(500px, calc(100% - 32px));
-    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto !important;
     padding: 30px;
     border-radius: 15px;
+    box-sizing: border-box;
 }
 
-/* Foto profil */
-img {
-    display: block;
+.bio-box img {
     width: 150px;
     height: 150px;
-    margin: 0 auto;
     border-radius: 50%;
     object-fit: cover;
+    margin: 0 auto;
 }
 
-/* Judul */
-h1 {
+.bio-box h1 {
     color: #333;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-h2 {
+.bio-box h2 {
     color: #444;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-/* Tabel biodata */
-table {
+.bio-box table {
     margin: 20px auto;
     border-collapse: collapse;
     text-align: left;
 }
 
-td {
+.bio-box td {
     padding: 8px 15px;
     border-bottom: 1px solid #ddd;
 }
 
-/* Hobi */
-ul {
-    display: inline-block;
-    text-align: left;
-}
-
-/* Tombol */
-button {
+.bio-box button {
     background-color: #333;
     color: white;
     border: none;
@@ -87,27 +78,30 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.bio-box button:hover {
     background-color: #555;
 }
 
-/* Link */
-a {
+.bio-box a {
     text-decoration: none;
 }
 
-@media (max-width: 600px) {
-    .profile-container {
-        margin: 28px auto;
-        padding: 24px 16px;
+@media (max-width: 576px) {
+    .bio-box {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 20px auto !important;
     }
 
-    table {
+    .bio-box table {
         width: 100%;
     }
 
-    td {
-        padding: 8px;
-        overflow-wrap: anywhere;
+    .bio-box h1 {
+        font-size: 22px;
+    }
+
+    .bio-box h2 {
+        font-size: 18px;
     }
 }
